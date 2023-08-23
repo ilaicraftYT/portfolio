@@ -20,11 +20,12 @@ export async function load({ fetch, params }) {
 		.use(rehypeStringify, { allowDangerousHtml: true })
 		.process(metadata.body);
 
-	console.log(post);
+	const splittedDate = metadata.attributes.date.split("-");
 
 	return {
 		slug,
 		post,
-		title: metadata.attributes.title
+		title: metadata.attributes.title,
+		date: `${["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"][Number(splittedDate[1]) - 1]} ${splittedDate[0]}, ${splittedDate[2]}`
 	};
 }
