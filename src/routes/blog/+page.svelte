@@ -7,7 +7,7 @@
 <div class="bg-surface0 rounded-xl p-3 mt-2 text-text">
 	<ul>
 		{#each data.posts as post}
-			<li class="bg-surface1 rounded-lg p-3">
+			<li class="bg-surface1 rounded-lg p-3 mb-2">
 				<h2 class="text-2xl font-bold">
 					<a href="/blog/${post.path}">
 						{post.title}

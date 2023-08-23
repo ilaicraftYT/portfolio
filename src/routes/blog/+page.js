@@ -1,4 +1,3 @@
-import { browser } from '$app/environment';
 import matter from 'front-matter';
 
 export async function load() {
@@ -18,11 +17,8 @@ export async function load() {
 		const front = matter(matterData);
 
 		v.title = front.attributes.title;
-		v.description = front.attributes.body.slice(0, 40).trim() + '...';
+		v.description = front.body.slice(0, 40).trim() + '...';
 	}
-	data.forEach(async (v) => {
-		if (!browser) console.log(v);
-	});
 
 	return { posts: data };
 }
