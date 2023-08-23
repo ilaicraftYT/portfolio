@@ -3,18 +3,18 @@
 @tailwind utilities;
 
 pre {
-  color: unset !important;
-  @apply bg-surface1 !important; /*I'm lazy to add the media queries manually*/
+	color: unset !important;
+	@apply bg-surface1 !important; /*I'm lazy to add the media queries manually*/
 }
 
 pre code {
-  background-color: inherit !important;
+	background-color: inherit !important;
 }
 
 .info {
-  @apply bg-sapphire/50 border-4 border-sapphire text-base dark:text-text mb-2 p-4 rounded-lg;
+	@apply bg-sapphire/50 border-4 border-sapphire text-base dark:text-text mb-2 p-4 rounded-lg;
 }
 
 .warn {
-  @apply bg-yellow/50 border-4 border-yellow text-base dark:text-text p-4 mb-2 rounded-lg;
+	@apply bg-yellow/50 border-4 border-yellow text-base dark:text-text p-4 mb-2 rounded-lg;
 }

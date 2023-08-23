@@ -1,16 +1,16 @@
-import { writable } from "svelte/store"
-import { browser } from "$app/environment"
+import { writable } from 'svelte/store';
+import { browser } from '$app/environment';
 
 if (browser) {
-  var stored = localStorage.getItem("isDark")
+	var stored = localStorage.getItem('isDark');
 }
 
-const isDark = writable(JSON.parse(stored ?? "null"))
+const isDark = writable(JSON.parse(stored ?? 'null'));
 
 if (browser) {
-  isDark.subscribe(value => {
-    localStorage.setItem("isDark", String(value))
-  })
+	isDark.subscribe((value) => {
+		localStorage.setItem('isDark', String(value));
+	});
 }
 
-export { isDark }
+export { isDark };
