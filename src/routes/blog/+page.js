@@ -15,10 +15,15 @@ export async function load() {
 		);
 		const matterData = await matterRes.text();
 		const front = matter(matterData);
+		const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+		const splittedDate = front.attributes.date.split("-");
 
 		v.title = front.attributes.title;
-		v.description = front.body.slice(0, 40).trim() + '...';
+		v.description = front.body.slice(0, 70).trim() + '...';
+		v.date = `${months[Number(splittedDate[1]) + 1]} ${splittedDate[0]}, ${splittedDate[2]}`
 	}
+
+	console.log(data)
 
 	return { posts: data };
 }

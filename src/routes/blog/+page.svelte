@@ -8,14 +8,15 @@
 	<ul>
 		{#each data.posts as post}
 			<li class="bg-surface1 rounded-lg p-3 mb-2">
-				<h2 class="text-2xl font-bold">
-					<a href="/blog/${post.path}">
-						{post.title}
-					</a>
-				</h2>
+				<p class="text-subtext0 font-light">{post.date}</p>
+				<a href="/blog/{post.path}" class="hover:text-green">
+					<h2 class="text-2xl font-bold">
+					  {post.title}
+					</h2>
+				</a>
 				<div class="flex flex-row justify-between">
 					<p>{post.description}</p>
-					<a href="/blog/{post.path}">
+					<a href="/blog/{post.path}" class="hover:text-green w-fit">
 						<IconChevronRight />
 					</a>
 				</div>
