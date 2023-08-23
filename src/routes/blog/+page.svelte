@@ -11,15 +11,13 @@
 				<p class="text-subtext0 font-light">{post.date}</p>
 				<a href="/blog/{post.path}" class="hover:text-green">
 					<h2 class="text-2xl font-bold">
-					  {post.title}
+						{post.title}
 					</h2>
 				</a>
-				<div class="flex flex-row justify-between">
-					<p>{post.description}</p>
-					<a href="/blog/{post.path}" class="hover:text-green w-fit">
-						<IconChevronRight />
-					</a>
-				</div>
+				<p>{post.description}</p>
+				<a href="/blog/{post.path}" class="text-green inline-flex items-center hover:text-teal">
+					Read more <IconChevronRight size="20px" />
+				</a>
 			</li>
 		{/each}
 	</ul>

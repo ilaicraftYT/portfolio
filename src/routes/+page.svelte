@@ -21,7 +21,6 @@
 	}
 
 	//weather.subscribe(v => console.log(v))
-	console.log('data', data);
 </script>
 
 <div
