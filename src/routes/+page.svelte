@@ -1,7 +1,7 @@
 <script>
 	export let data;
 
-	import { isDark } from '$lib/themeStore';
+	import { isDark } from '$lib/store';
 	import GridCard from '$lib/GridCard.svelte';
 	import TimeCard from '$lib/TimeCard.svelte';
 	import { useSWR } from 'sswr';
@@ -36,7 +36,7 @@
 	</GridCard>
 	<GridCard color="bg-red" extraClasses="">
 		<div>
-			<div class="dark:text-text flex flex-col items-center justify-center">
+			<div class="flex flex-col items-center justify-center">
 				<h3 class="text-1xl text-light">Age</h3>
 				<p class="text-3xl font-black">15</p>
 				<p class="font-medium">years old</p>
@@ -51,15 +51,11 @@
 			/>
 		</label>
 	</GridCard>
-	<GridCard color="bg-[#333]" extraClasses="flex justify-center items-center">
-		<a class="cursor-pointer" href="https://github.com/ilaicraftYT" target="_blank">
-			<IconBrandGithub class="dark:text-text" size="3rem" />
-		</a>
+	<GridCard color="bg-[#333]" href="https://github.com/ilaicraftYT">
+		<IconBrandGithub class="dark:text-text" size="3rem" />
 	</GridCard>
-	<GridCard color="bg-[#0a66c2]" extraClasses="flex justify-center items-center">
-		<a class="cursor-pointer" href="https://linkedin.com/in/soyilai" target="_blank">
-			<IconBrandLinkedin class="dark:text-text" size="3rem" />
-		</a>
+	<GridCard color="bg-[#0a66c2]" href="https://linkedin.com/in/soyilai">
+		<IconBrandLinkedin class="dark:text-text" size="3rem" />
 	</GridCard>
 	<TimeCard {data} />
 	<GridCard bento={true} color="bg-surface0" extraClasses="text-text p-4 overflow-">
@@ -80,10 +76,8 @@
 			</div>
 		</div>
 	</GridCard>
-	<GridCard color="bg-[#00acee]" extraClasses="dark:text-text flex justify-center items-center">
-		<a href="https://twitter.com/ilaicraft" target="_blank">
-			<IconBrandTwitter size="3rem" />
-		</a>
+	<GridCard color="bg-[#00acee]" extraClasses="dark:text-text" href="https://twitter.com/ilaicraft">
+		<IconBrandTwitter size="3rem" />
 	</GridCard>
 	<GridCard bento={true} color="bg-[#1db954]" extraClasses="dark:text-text p-4">
 		<div class="inline-flex">
@@ -91,20 +85,14 @@
 		</div>
 		<p><b>PYRO</b> - Chester Young, Castion</p>
 	</GridCard>
-	<GridCard color="bg-[#ff0000]" extraClasses="dark:text-text flex justify-center items-center">
-		<a href="https://youtube.com/@soyilai" target="_blank">
-			<IconBrandYoutube size="3rem" />
-		</a>
+	<GridCard color="bg-[#ff0000]" extraClasses="dark:text-text" href="https://youtube.com/@soyilai">
+		<IconBrandYoutube size="3rem" />
 	</GridCard>
-	<GridCard color="bg-blue" extraClasses="dark:text-text flex justify-center items-center">
-		<a href="mailto:" target="_blank">
-			<IconMail size="3rem" />
-		</a>
+	<GridCard color="bg-blue" extraClasses="dark:text-text" href="mailto:soyilai@proton.me">
+		<IconMail size="3rem" />
 	</GridCard>
-	<GridCard color="bg-[#5865f2]" extraClasses="dark:text-text flex justify-center items-center">
-		<a href="#" target="_blank">
-			<IconBrandDiscord size="3rem" />
-		</a>
+	<GridCard color="bg-[#5865f2]" extraClasses="dark:text-text" href="https://discord.gg/wQDE9Vfvq7">
+		<IconBrandDiscord size="3rem" />
 	</GridCard>
 	<GridCard occupyAll={true} color="bg-yellow" extraClasses="flex flex-col pt-2">
 		<h3 class="mx-auto pb-2">Blog</h3>
