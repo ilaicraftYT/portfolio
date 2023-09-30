@@ -1,7 +1,6 @@
 <script>
 	import '../../app.css';
 	import { onMount } from 'svelte';
-	import Navbar from '$lib/Navbar.svelte';
 	import computeTheme from '$lib/theme';
 
 	onMount(() => {
@@ -10,6 +9,5 @@
 </script>
 
 <main class="m-2">
-	<Navbar />
 	<slot />
 </main>
