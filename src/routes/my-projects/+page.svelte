@@ -27,8 +27,21 @@
 	let projects = [
 		{
 			name: 'Zubiri School',
-			desc: 'Actual language learning school website for some IRL friend.',
-			stack: ['react', 'tailwind', 'mantine']
+			desc: 'Actual language learning school website for some IRL friend',
+			stack: ['react', 'tailwind', 'mantine'],
+			link: '#'
+		},
+		{
+			name: 'Poggit Next',
+			desc: "PocketMine's Plugin Market UI remake with Next.js",
+			stack: ['react', 'tailwind', 'mantine'],
+			link: 'https://github.com/ilaicraftYT/poggit-next-ui'
+		},
+		{
+			name: 'My portfolio',
+			desc: 'This very portfolio experiment made to learn Svelte that had a really good result',
+			stack: ['svelte', 'tailwind'],
+			link: 'https://github.com/ilaicraftYT/portfolio'
 		}
 	];
 
@@ -84,8 +97,9 @@
 	<div class="p-2 rounded-xl">
 		{#each renderProjects as project}
 			<a
-				href="/"
-				class="flex flex-col items-center border border-surface1 rounded-lg shadow md:flex-row md:max-w-xl bg-surface0 hover:bg-surface1"
+				href={project.link}
+				target="_blank"
+				class="flex flex-col items-center border border-surface1 rounded-lg shadow md:flex-row md:max-w-xl bg-surface0 hover:bg-surface1 m-2"
 			>
 				<img
 					class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
