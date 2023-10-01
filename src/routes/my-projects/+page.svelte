@@ -24,7 +24,7 @@
 			icon: IconBrandMantine
 		}
 	};
-	const projects = [
+	let projects = [
 		{
 			name: 'Zubiri School',
 			desc: 'Actual language learning school website for some IRL friend.',
@@ -32,13 +32,14 @@
 		}
 	];
 
+	// TODO Clean this!
 	function filterProjects() {
 		return projects.filter((project) =>
 			project.stack.some((stack) => enabledFilters.includes(stack))
 		);
 	}
 
-	console.log(enabledFilters);
+	let renderProjects = filterProjects();
 </script>
 
 <div class="text-text mt-2">
@@ -69,6 +70,8 @@
 					} else {
 						target.parentElement.setAttribute('data-checked', enabledFilters.includes(stackIndex));
 					}
+
+					renderProjects = filterProjects();
 				}}
 			>
 				<svelte:component this={stackInfo[stackIndex].icon} class="mr-2" />
@@ -79,7 +82,7 @@
 		{/each}
 	</div>
 	<div class="p-2 rounded-xl">
-		{#each filterProjects() as project}
+		{#each renderProjects as project}
 			<a
 				href="/"
 				class="flex flex-col items-center border border-surface1 rounded-lg shadow md:flex-row md:max-w-xl bg-surface0 hover:bg-surface1"
@@ -94,8 +97,7 @@
 						{project.name}
 					</h5>
 					<p class="mb-3 font-normal text-subtext0">
-						Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse
-						chronological order.
+						{project.desc}
 					</p>
 				</div>
 			</a>
