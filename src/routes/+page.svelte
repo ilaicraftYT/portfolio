@@ -4,7 +4,6 @@
 	import { isDark } from '$lib/store';
 	import GridCard from '$lib/GridCard.svelte';
 	import TimeCard from '$lib/TimeCard.svelte';
-	import { useSWR } from 'sswr';
 	import IconBrandGithub from '@tabler/icons-svelte/dist/svelte/icons/IconBrandGithub.svelte';
 	import IconBrandLinkedin from '@tabler/icons-svelte/dist/svelte/icons/IconBrandLinkedin.svelte';
 	import IconBrandSpotify from '@tabler/icons-svelte/dist/svelte/icons/IconBrandSpotify.svelte';
@@ -24,7 +23,7 @@
 </script>
 
 <div
-	class="grid grid-rows-[192px_115.2px_110.5px_115.2px_120px_repeat(3,_115.2px)] grid-cols-3 gap-2 m-4 text-base"
+	class="grid grid-rows-[192px_115.2px_110.5px_115.2px_120px_repeat(1,_115.2px)] grid-cols-3 gap-2 m-4 text-base"
 >
 	<GridCard occupyAll={true} color="bg-gradient-to-br from-green to-teal">
 		<h2 class="text-4xl font-black absolute bottom-[5rem] left-0 p-4">
@@ -57,7 +56,7 @@
 	<GridCard color="bg-[#0a66c2]" href="https://linkedin.com/in/soyilai">
 		<IconBrandLinkedin class="dark:text-text" size="3rem" />
 	</GridCard>
-	<TimeCard {data} />
+	<TimeCard data={data.weather} />
 	<GridCard bento={true} color="bg-surface0" extraClasses="text-text p-4 overflow-">
 		<div class="inline-flex text-l">
 			<IconBoxMultiple /> <span class="pl-1 font-medium">Projects</span>
@@ -97,8 +96,19 @@
 	<GridCard occupyAll={true} color="bg-yellow" extraClasses="flex flex-col pt-2">
 		<h3 class="mx-auto pb-2">Blog</h3>
 		<hr class="border-base opacity-30" />
+		<div class="m-2">
+			{#each data.posts as post}
+				<a href="/blog/{post.path}" class="cursor-pointer">
+					<div class="p-4">
+						<span class="inline-flex items-center">
+							<h4 class="font-bold text-xl pr-2">{post.title}</h4>
+							<p class="font-light">{post.date}</p>
+						</span>
+						<p>{post.description}</p>
+					</div>
+				</a>
+				<hr class="border-base opacity-20" />
+			{/each}
+		</div>
 	</GridCard>
-	{#each placeholders as placeholder, index}
-		<GridCard bento={false} color="bg-surface0" />
-	{/each}
 </div>

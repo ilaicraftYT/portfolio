@@ -11,3 +11,10 @@
 		{@html data.post}
 	</div>
 </article>
+
+<svelte:head>
+	<title>{data.title}</title>
+	<meta content="SoyIlai" property="og:site_name" />
+	<meta content={data.title} property="og:title" />
+	<meta content={data.desc} property="og:description" />
+</svelte:head>

@@ -25,6 +25,7 @@ export async function load({ fetch, params }) {
 	return {
 		slug,
 		post,
+		desc: metadata.body.slice(0, 80).trim() + '...',
 		title: metadata.attributes.title,
 		date: `${["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"][Number(splittedDate[1]) - 1]} ${splittedDate[0]}, ${splittedDate[2]}`
 	};

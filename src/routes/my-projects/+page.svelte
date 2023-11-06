@@ -4,6 +4,7 @@
 	import IconBrandTailwind from '@tabler/icons-svelte/dist/svelte/icons/IconBrandTailwind.svelte';
 	import IconBrandMantine from '@tabler/icons-svelte/dist/svelte/icons/IconBrandMantine.svelte';
 	import IconChevronRight from '@tabler/icons-svelte/dist/svelte/icons/IconChevronLeft.svelte';
+	import IconBrandHTML5 from '@tabler/icons-svelte/dist/svelte/icons/IconBrandHtml5.svelte';
 
 	let enabledFilters = [];
 	const stackInfo = {
@@ -22,6 +23,11 @@
 		mantine: {
 			outline: 'data-[checked=true]:outline-[#3397F0] data-[checked=true]:text-[#3397F0]',
 			icon: IconBrandMantine
+		},
+		html: {
+			outline: 'data-[checked=true]:outline-[#E14C26] data-[checked=true]:text-[#E14C26]',
+			name: 'HTML',
+			icon: IconBrandHTML5
 		}
 	};
 	let projects = [
@@ -42,10 +48,21 @@
 			desc: 'This very portfolio experiment made to learn Svelte that had a really good result',
 			stack: ['svelte', 'tailwind'],
 			link: 'https://github.com/ilaicraftYT/portfolio'
+		},
+		{
+			name: 'Tetris HTML',
+			desc: "Turns out that it was just me that didn't make Tetris as a beginner.",
+			stack: ['html'],
+			link: 'https://github.com/ilaicraftYT/tetris-html'
+		},
+		{
+			name: 'DashIO',
+			desc: 'Discord bot developer that wants to flex a nice-looking dashboard? This is for you!',
+			stack: ['react', 'tailwind'],
+			link: '#'
 		}
 	];
 
-	// TODO Clean this!
 	function filterProjects() {
 		return projects.filter((project) =>
 			project.stack.some((stack) => enabledFilters.includes(stack))
@@ -72,6 +89,7 @@
 					stackIndex
 				].outline}"
 				on:click={(e) => {
+					// TODO: Clean this!
 					!enabledFilters.includes(stackIndex)
 						? enabledFilters.push(stackIndex)
 						: (enabledFilters = enabledFilters.filter((v) => v !== stackIndex));
@@ -81,7 +99,7 @@
 					if (target instanceof HTMLButtonElement) {
 						target.setAttribute('data-checked', enabledFilters.includes(stackIndex));
 					} else {
-						target.parentElement.setAttribute('data-checked', enabledFilters.includes(stackIndex));
+						target.parentElement.setAttribute('data-checked', enabledFilters.includes(stackIndex)); // could have clicked the p instead
 					}
 
 					renderProjects = filterProjects();
@@ -89,7 +107,7 @@
 			>
 				<svelte:component this={stackInfo[stackIndex].icon} class="mr-2" />
 				<p>
-					{stackIndex.at(0).toUpperCase() + stackIndex.slice(1)}
+					{stackInfo[stackIndex].name ?? stackIndex.at(0).toUpperCase() + stackIndex.slice(1)}
 				</p>
 			</button>
 		{/each}
@@ -99,13 +117,15 @@
 			<a
 				href={project.link}
 				target="_blank"
-				class="flex flex-col items-center border border-surface1 rounded-lg shadow md:flex-row md:max-w-xl bg-surface0 hover:bg-surface1 m-2"
+				class="flex flex-col items-center border border-surface1 rounded-lg shadow md:flex-row bg-surface0 hover:bg-surface1 m-2"
 			>
-				<img
-					class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
-					src="/docs/images/blog/image-4.jpg"
-					alt=""
-				/>
+				{#if project.image}
+					<img
+						class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+						src={project.image}
+						alt={project.name}
+					/>
+				{/if}
 				<div class="flex flex-col justify-between p-4 leading-normal">
 					<h5 class="mb-2 text-2xl font-bold tracking-tight">
 						{project.name}
