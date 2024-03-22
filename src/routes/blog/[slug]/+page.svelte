@@ -3,7 +3,7 @@
 </script>
 
 <!-- h-[calc(100vh-72px)] ugliest fix ever !-->
-<article class="bg-surface0 rounded-xl p-3 mt-2 w-full h-[calc(100vh-72px)]">
+<article class="bg-surface0 rounded-xl p-3 mt-2 w-full min-h-[calc(100vh-72px)]">
 	<div class="text-center text-text">
 		<h1 class="font-extrabold text-4xl">{data.title}</h1>
 		<p class="font-light text-subtext0">{data.date}</p>

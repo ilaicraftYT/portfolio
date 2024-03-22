@@ -11,10 +11,22 @@ pre code {
 	background-color: inherit !important;
 }
 
-.info {
-	@apply bg-sapphire/50 border-l-4 border-l-sapphire text-base dark:text-text mb-2 p-4 rounded-sm;
+.note {
+	@apply border-l-4 border-l-sapphire text-text mb-2 p-4 rounded-sm;
 }
 
-.warn {
-	@apply bg-yellow/50 border-l-4 border-l-yellow text-base dark:text-text p-4 mb-2 rounded-sm;
+.tip {
+	@apply border-l-4 border-l-green text-text mb-2 p-4 rounded-sm;
+}
+
+.important {
+	@apply border-l-4 border-l-mauve text-text mb-2 p-4 rounded-sm;
+}
+
+.warning {
+	@apply border-l-4 border-l-yellow text-text mb-2 p-4 rounded-sm;
+}
+
+.caution {
+	@apply border-l-4 border-l-red text-text mb-2 p-4 rounded-sm;
 }
