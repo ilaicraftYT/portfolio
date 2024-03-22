@@ -6,7 +6,7 @@
 	import IconChevronRight from '@tabler/icons-svelte/dist/svelte/icons/IconChevronLeft.svelte';
 	import IconBrandHTML5 from '@tabler/icons-svelte/dist/svelte/icons/IconBrandHtml5.svelte';
 
-	let enabledFilters = [];
+	let enabledFilters = ['react', 'svelte', 'tailwind', 'mantine', 'html'];
 	const stackInfo = {
 		react: {
 			outline: 'data-[checked=true]:outline-[#61dbfb] data-[checked=true]:text-[#61dbfb]',
@@ -88,19 +88,18 @@
 				class="w-fit p-2 bg-surface1 inline-flex mx-2 rounded-lg data-[checked=true]:outline outline-2 outline-offset-0 hover:bg-surface2 {stackInfo[
 					stackIndex
 				].outline}"
+				data-checked="true"
 				on:click={(e) => {
-					// TODO: Clean this!
 					!enabledFilters.includes(stackIndex)
 						? enabledFilters.push(stackIndex)
 						: (enabledFilters = enabledFilters.filter((v) => v !== stackIndex));
 
-					let target = e.target;
-
-					if (target instanceof HTMLButtonElement) {
-						target.setAttribute('data-checked', enabledFilters.includes(stackIndex));
-					} else {
-						target.parentElement.setAttribute('data-checked', enabledFilters.includes(stackIndex)); // could have clicked the p instead
-					}
+					e.target instanceof HTMLButtonElement
+						? e.target.setAttribute('data-checked', enabledFilters.includes(stackIndex))
+						: e.target.parentElement.setAttribute(
+								'data-checked',
+								enabledFilters.includes(stackIndex)
+						  );
 
 					renderProjects = filterProjects();
 				}}
