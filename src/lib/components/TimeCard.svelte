@@ -1,6 +1,6 @@
 <script>
 	export let data;
-	import GridCard from '$lib/GridCard.svelte';
+	import GridCard from '$lib/components/GridCard.svelte';
 
 	const formatter = new Intl.DateTimeFormat('en-US', {
 		timeZone: 'America/Mexico_City',
@@ -18,6 +18,7 @@
 	<img
 		src="https://openweathermap.org/img/wn/{data?.weather[0].icon}@2x.png"
 		class="absolute right-0"
+		alt={data?.weather[0].main}
 	/>
 	<p class="font-medium">Xalapa, Veracruz MX</p>
 	<p class="font-black text-l">{data?.main.temp.toFixed(0) + '°'} - {data?.weather[0].main}</p>
