@@ -26,6 +26,6 @@
 </svelte:head>
 
 <main class="m-2">
-	<Navbar />
-	<slot />
+		<Navbar />
+		<slot />
 </main>
