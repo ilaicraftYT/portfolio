@@ -4,7 +4,7 @@
 </script>
 
 <GridCard occupyAll={true} color="bg-yellow" extraClasses="flex flex-col pt-2">
-		<h3 class="mx-auto pb-2">Blog</h3>
+		<a class="mx-auto pb-2" href="/blog">Blog</a>
 		<hr class="border-base opacity-30" />
 		<div class="m-2">
 			{#each data.posts as post}
