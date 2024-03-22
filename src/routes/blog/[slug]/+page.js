@@ -14,6 +14,12 @@ export async function load({ fetch, params }) {
 	const res = await fetch(
 		`https://raw.githubusercontent.com/ilaicraftYT/blog/main/posts/${slug}.md`
 	);
+
+	if (!res.ok) {
+		return {
+			ok: false
+		}
+	}
 	const raw = await res.text();
 	const metadata = matter(raw);
 
@@ -41,6 +47,7 @@ export async function load({ fetch, params }) {
 	return {
 		slug,
 		post,
+		ok: true,
 		desc: metadata.body.slice(0, 80).trim() + '...',
 		title: metadata.attributes.title,
 		date: `${["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"][Number(splittedDate[1]) - 1]} ${splittedDate[0]}, ${splittedDate[2]}`

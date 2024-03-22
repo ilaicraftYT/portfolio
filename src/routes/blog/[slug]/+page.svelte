@@ -2,6 +2,7 @@
 	export let data;
 </script>
 
+{#if data.ok}
 <!-- h-[calc(100vh-72px)] ugliest fix ever !-->
 <article class="bg-surface0 rounded-xl p-3 mt-2 w-full min-h-[calc(100vh-72px)]">
 	<div class="text-center text-text">
@@ -12,10 +13,9 @@
 		{@html data.post}
 	</div>
 </article>
-
-<svelte:head>
-	<title>{data.title}</title>
-	<meta content="SoyIlai" property="og:site_name" />
-	<meta content={data.title} property="og:title" />
-	<meta content={data.desc} property="og:description" />
-</svelte:head>
+{:else}
+<article class="bg-surface0 rounded-xl p-3 mt-2 w-full min-h-[calc(100vh-72px)] text-text">
+	<h1 class="font-extrabold text-3xl">Hope I was a teapot.</h1>
+	<p>Something happened, make sure you're entering a valid blog entry.</p>
+</article>
+{/if}
