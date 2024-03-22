@@ -41,9 +41,7 @@ export async function load({ fetch, params }) {
 		.process(metadata.body);
 
 	const splittedDate = metadata.attributes.date.split("-");
-
-	console.log(post)
-
+	
 	return {
 		slug,
 		post,
