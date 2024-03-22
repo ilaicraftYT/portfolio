@@ -9,5 +9,5 @@ export async function load() {
 	let posts = await getPosts(fetch)
 	posts = posts.slice(0, 3)
 
-	return { weather: data.json(), posts }
+	return { weather: await data.json(), posts }
 }
