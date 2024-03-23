@@ -2,6 +2,9 @@
 	import '../../app.css';
 	import { onMount } from 'svelte';
 	import computeTheme from '$lib/theme';
+	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
+
+	injectSpeedInsights();
 
 	onMount(() => {
 		computeTheme();

@@ -4,6 +4,9 @@
 	import { onMount } from 'svelte';
 	import Navbar from '$lib/Navbar.svelte';
 	import computeTheme from '$lib/theme.js';
+	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
+
+	injectSpeedInsights();
 
 	onMount(() => {
 		computeTheme();

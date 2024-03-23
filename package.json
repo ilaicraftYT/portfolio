@@ -28,6 +28,7 @@
 	"dependencies": {
 		"@tabler/icons-svelte": "^2.29.0",
 		"@tailwindcss/typography": "^0.5.9",
+		"@vercel/speed-insights": "^1.0.10",
 		"front-matter": "^4.0.2",
 		"gray-matter": "^4.0.3",
 		"hastscript": "^9.0.0",
