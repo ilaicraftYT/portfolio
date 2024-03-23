@@ -1,6 +1,4 @@
 import { h } from "hastscript"
-import { visit, SKIP } from "unist-util-visit"
-import { isElement } from "hast-util-is-element"
 
 const Note = (props, children) => h(".note", [h("p.text-sapphire.my-2", "Note"), ...children]) 
 const Tip = (props, children) => h(".tip", [h("p.text-green.my-2", "Tip"), ...children])
