@@ -12,7 +12,6 @@
 	setInterval(() => {
 		time = formatter.format(new Date());
 	}, 1000);
-	console.log(data)
 </script>
 
 <GridCard bento={true} color="bg-surface0" extraClasses="timecard text-text p-4">
