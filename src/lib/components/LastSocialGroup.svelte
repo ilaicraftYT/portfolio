@@ -1,8 +1,8 @@
 <script>
 	import GridCard from '$lib/components/GridCard.svelte';
-	import IconBrandYoutube from '@tabler/icons-svelte/dist/svelte/icons/IconBrandYoutube.svelte';
-	import IconBrandDiscord from '@tabler/icons-svelte/dist/svelte/icons/IconBrandDiscord.svelte';
-	import IconMail from '@tabler/icons-svelte/dist/svelte/icons/IconMail.svelte';
+	import IconBrandYoutube from '@tabler/icons-svelte/IconBrandYoutube.svelte';
+	import IconBrandDiscord from '@tabler/icons-svelte/IconBrandDiscord.svelte';
+	import IconMail from '@tabler/icons-svelte/IconMail.svelte';
 </script>
 
 <GridCard color="bg-[#ff0000]" extraClasses="dark:text-text" href="https://youtube.com/@soyilai">

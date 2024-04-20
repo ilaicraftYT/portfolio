@@ -1,6 +1,6 @@
 <script>
 	import GridCard from '$lib/components/GridCard.svelte';
-	import IconBrandSpotify from '@tabler/icons-svelte/dist/svelte/icons/IconBrandSpotify.svelte';
+	import IconBrandSpotify from '@tabler/icons-svelte/IconBrandSpotify.svelte';
 </script>
 
 <GridCard bento={true} color="bg-[#1db954]" extraClasses="dark:text-text p-4">

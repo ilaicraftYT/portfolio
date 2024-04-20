@@ -1,7 +1,7 @@
 <script>
 	import { isDark } from '$lib/store';
-	import NightIcon from '@tabler/icons-svelte/dist/svelte/icons/IconMoonStars.svelte';
-	import SunIcon from '@tabler/icons-svelte/dist/svelte/icons/IconSun.svelte';
+	import NightIcon from '@tabler/icons-svelte/IconMoonStars.svelte';
+	import SunIcon from '@tabler/icons-svelte/IconSun.svelte';
 
 	function toggleDarkMode() {
 		isDark.update((v) => !v);

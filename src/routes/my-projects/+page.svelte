@@ -1,10 +1,10 @@
 <script>
-	import IconBrandReact from '@tabler/icons-svelte/dist/svelte/icons/IconBrandReact.svelte';
-	import IconBrandSvelte from '@tabler/icons-svelte/dist/svelte/icons/IconBrandSvelte.svelte';
-	import IconBrandTailwind from '@tabler/icons-svelte/dist/svelte/icons/IconBrandTailwind.svelte';
-	import IconBrandMantine from '@tabler/icons-svelte/dist/svelte/icons/IconBrandMantine.svelte';
-	import IconChevronRight from '@tabler/icons-svelte/dist/svelte/icons/IconChevronLeft.svelte';
-	import IconBrandHTML5 from '@tabler/icons-svelte/dist/svelte/icons/IconBrandHtml5.svelte';
+	import IconBrandReact from '@tabler/icons-svelte/IconBrandReact.svelte';
+	import IconBrandSvelte from '@tabler/icons-svelte/IconBrandSvelte.svelte';
+	import IconBrandTailwind from '@tabler/icons-svelte/IconBrandTailwind.svelte';
+	import IconBrandMantine from '@tabler/icons-svelte/IconBrandMantine.svelte';
+	import IconChevronRight from '@tabler/icons-svelte/IconChevronLeft.svelte';
+	import IconBrandHTML5 from '@tabler/icons-svelte/IconBrandHtml5.svelte';
 
 	let enabledFilters = ['react', 'svelte', 'tailwind', 'mantine', 'html'];
 	const stackInfo = {
