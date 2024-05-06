@@ -5,8 +5,11 @@
 	import Navbar from '$lib/Navbar.svelte';
 	import computeTheme from '$lib/theme.js';
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
+	import { dev } from '$app/environment';
+	import { inject } from '@vercel/analytics';
 
 	injectSpeedInsights();
+	inject({ mode: dev ? 'development' : 'production' });
 
 	onMount(() => {
 		computeTheme();
@@ -29,6 +32,6 @@
 </svelte:head>
 
 <main class="m-2">
-		<Navbar />
-		<slot />
+	<Navbar />
+	<slot />
 </main>

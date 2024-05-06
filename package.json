@@ -1,44 +1,45 @@
 {
-	"name": "portfolio",
-	"version": "0.0.1",
-	"private": true,
-	"scripts": {
-		"dev": "vite dev",
-		"build": "vite build",
-		"preview": "vite preview",
-		"lint": "prettier --plugin-search-dir . --check . && eslint .",
-		"format": "prettier --plugin-search-dir . --write ."
-	},
-	"devDependencies": {
-		"@catppuccin/tailwindcss": "^0.1.6",
-		"@sveltejs/adapter-auto": "^3.0.0",
-		"@sveltejs/kit": "^2.0.0",
-		"@sveltejs/vite-plugin-svelte": "^3.0.0",
-		"autoprefixer": "^10.4.14",
-		"eslint": "^8.57.0",
-		"eslint-config-prettier": "^9.1.0",
-		"eslint-plugin-svelte": "^2.35.1",
-		"postcss": "^8.4.27",
-		"prettier": "^2.8.0",
-		"prettier-plugin-svelte": "^2.10.1",
-		"svelte": "^4.2.12",
-		"tailwindcss": "^3.3.3",
-		"vite": "^5.0.0"
-	},
-	"type": "module",
-	"dependencies": {
-		"@tabler/icons-svelte": "^3.2.0",
-		"@tailwindcss/typography": "^0.5.9",
-		"@vercel/speed-insights": "^1.0.10",
-		"front-matter": "^4.0.2",
-		"gray-matter": "^4.0.3",
-		"hastscript": "^9.0.0",
-		"rehype-components": "^0.3.0",
-		"rehype-highlight": "^7.0.0",
-		"rehype-raw": "^7.0.0",
-		"rehype-stringify": "^10.0.0",
-		"remark-parse": "^11.0.0",
-		"remark-rehype": "^11.1.0",
-		"unified": "^11.0.4"
-	}
+  "name": "portfolio",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "prettier --plugin-search-dir . --check . && eslint .",
+    "format": "prettier --plugin-search-dir . --write ."
+  },
+  "devDependencies": {
+    "@catppuccin/tailwindcss": "^0.1.6",
+    "@sveltejs/adapter-auto": "^3.0.0",
+    "@sveltejs/kit": "^2.0.0",
+    "@sveltejs/vite-plugin-svelte": "^3.0.0",
+    "autoprefixer": "^10.4.14",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-svelte": "^2.35.1",
+    "postcss": "^8.4.27",
+    "prettier": "^2.8.0",
+    "prettier-plugin-svelte": "^2.10.1",
+    "svelte": "^4.2.12",
+    "tailwindcss": "^3.3.3",
+    "vite": "^5.0.0"
+  },
+  "type": "module",
+  "dependencies": {
+    "@tabler/icons-svelte": "^3.2.0",
+    "@tailwindcss/typography": "^0.5.9",
+    "@vercel/analytics": "^1.2.2",
+    "@vercel/speed-insights": "^1.0.10",
+    "front-matter": "^4.0.2",
+    "gray-matter": "^4.0.3",
+    "hastscript": "^9.0.0",
+    "rehype-components": "^0.3.0",
+    "rehype-highlight": "^7.0.0",
+    "rehype-raw": "^7.0.0",
+    "rehype-stringify": "^10.0.0",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.1.0",
+    "unified": "^11.0.4"
+  }
 }
