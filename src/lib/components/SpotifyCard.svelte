@@ -9,7 +9,7 @@
 	</div>
 	<div class="grid text-xs sm:grid-cols-2 sm:text-base/6">
 		<p>
-			<span><b>Llorar</b> - Los Socios Del Ritmo</span>
+			<span><b>Al Despertar</b> - Rayito Colombiano</span>
 		</p>
 		<p>
 			<span><b>El Afilador</b> - Grupo Carabo</span>
