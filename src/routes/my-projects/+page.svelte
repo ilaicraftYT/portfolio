@@ -82,14 +82,19 @@
 			<span />
 		</div>
 	</div>
-	<div class="bg-surface0 inline-flex justify-around w-full p-2 rounded-xl mb-2">
+	<div
+		class="bg-surface0 max-sm:space-y-2 sm:inline-flex justify-around items-center w-full p-2 rounded-xl mb-2"
+	>
 		{#each Object.keys(stackInfo) as stackIndex}
 			<button
-				class="w-fit p-2 bg-surface1 inline-flex mx-2 rounded-lg data-[checked=true]:outline outline-2 outline-offset-0 hover:bg-surface2 {stackInfo[
+				class="grow p-2 bg-surface1 inline-flex justify-center mx-2 rounded-lg data-[checked=true]:outline outline-2 outline-offset-0 hover:bg-surface2 {stackInfo[
 					stackIndex
 				].outline}"
 				data-checked="true"
 				on:click={(e) => {
+					/*
+						FIXME: There's a better way, right?
+					*/
 					!enabledFilters.includes(stackIndex)
 						? enabledFilters.push(stackIndex)
 						: (enabledFilters = enabledFilters.filter((v) => v !== stackIndex));
@@ -99,7 +104,7 @@
 						: e.target.parentElement.setAttribute(
 								'data-checked',
 								enabledFilters.includes(stackIndex)
-						  );
+							);
 
 					renderProjects = filterProjects();
 				}}
