@@ -15,10 +15,10 @@
 			<span><b>El Afilador</b> - Grupo Carabo</span>
 		</p>
 		<p>
-			<span><b>Perfecta</b> - Miranda!</span>
+			<span><b>Cálido y Rojo</b> - Miranda!</span>
 		</p>
 		<p>
-			<span><b>Yo Quisiera</b> - Reik</span>
+			<span><b>Hilito</b> - Romeo Santos</span>
 		</p>
 	</div>
 </GridCard>
