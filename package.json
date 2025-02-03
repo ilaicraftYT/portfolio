@@ -27,7 +27,7 @@
   },
   "type": "module",
   "dependencies": {
-    "@tabler/icons-svelte": "3.2.0",
+    "@tabler/icons-svelte": "3.29.0",
     "@tailwindcss/typography": "^0.5.9",
     "@vercel/analytics": "^1.2.2",
     "@vercel/speed-insights": "^1.0.10",
