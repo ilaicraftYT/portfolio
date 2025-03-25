@@ -15,10 +15,10 @@
 			<span><b>El Afilador</b> - Grupo Carabo</span>
 		</p>
 		<p>
-			<span><b>Cálido y Rojo</b> - Miranda!</span>
+			<span><b>Hola</b> - Miranda!</span>
 		</p>
 		<p>
-			<span><b>Hilito</b> - Romeo Santos</span>
+			<span><b>Por Amarte Así</b> - Cristian Castro</span>
 		</p>
 	</div>
 </GridCard>
