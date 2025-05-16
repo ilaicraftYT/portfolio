@@ -3,7 +3,7 @@
 
 	import GridCard from '$lib/components/GridCard.svelte';
 	import NightIcon from '@tabler/icons-svelte/icon/moon-stars';
-	import SunIcon from '@tabler/icons-svelte/icon/icon-sun';
+	import SunIcon from '@tabler/icons-svelte/icon/sun';
 
 	function toggleDarkMode() {
 		isDark.update((v) => !v);

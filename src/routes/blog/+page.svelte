@@ -1,7 +1,7 @@
 <script>
 	export let data;
 
-	import IconChevronRight from '@tabler/icons-svelte/IconChevronRight.svelte';
+	import IconChevronRight from '@tabler/icons-svelte/icons/chevron-right';
 </script>
 
 <!-- h-[calc(100vh-72px)] ugliest fix ever !-->
