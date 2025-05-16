@@ -1,7 +1,7 @@
 <script>
 	import GridCard from '$lib/components/GridCard.svelte';
-	import IconBoxMultiple from '@tabler/icons-svelte/IconBoxMultiple.svelte';
-	import IconChevronRight from '@tabler/icons-svelte/IconChevronRight.svelte';
+	import IconBoxMultiple from '@tabler/icons-svelte/icons/box-multiple';
+	import IconChevronRight from '@tabler/icons-svelte/icons/chevron-right';
 </script>
 
 <GridCard bento={true} color="bg-surface0" extraClasses="text-text p-4 overflow-">

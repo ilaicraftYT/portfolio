@@ -1,7 +1,7 @@
 <script>
 	import GridCard from '$lib/components/GridCard.svelte';
-	import IconBrandGithub from '@tabler/icons-svelte/IconBrandGithub.svelte';
-	import IconBrandLinkedin from '@tabler/icons-svelte/IconBrandLinkedin.svelte';
+	import IconBrandGithub from '@tabler/icons-svelte/icons/brand-github';
+	import IconBrandLinkedin from '@tabler/icons-svelte/icons/brand-linkedin;
 </script>
 
 <GridCard color="bg-[#333]" href="https://github.com/ilaicraftYT">
